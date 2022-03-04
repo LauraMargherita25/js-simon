@@ -12,12 +12,20 @@ let arrRndNum = []
 for (let i = 0; i < 5; i++) {
     
     let rndNum = getRndNum(1, 100);
-    console.log("siamo 5 rndNum" + " " + rndNum);
     
     function getRndNum(min, max) {
         return Math.floor(Math.random() * (max - min + 1) ) + min;
     }
+    console.log("siamo 5 rndNum" + " " + rndNum);
     
     arrRndNum.push(rndNum);
+
+    // inserisci evita doppioni
 }
 console.log(arrRndNum);
+
+// visualizzo i numeri nella pagina
+const ele5RndNum = document.createElement("div");
+ele5RndNum.classList.add("main_container");
+ele5RndNum.innerHTML = arrRndNum;
+gridContainer.append(square);
