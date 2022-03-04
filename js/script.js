@@ -25,7 +25,11 @@ for (let i = 0; i < 5; i++) {
 console.log(arrRndNum);
 
 // visualizzo i numeri nella pagina
-const ele5RndNum = document.createElement("div");
+const mainContainer = document.createElement("div");
+document.querySelector(bo)
+
+
+/*const ele5RndNum = document.createElement("div");
 ele5RndNum.classList.add("main_container");
 ele5RndNum.innerHTML = arrRndNum;
-gridContainer.append(square);
+gridContainer.append(square);*/
