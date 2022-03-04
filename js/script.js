@@ -5,10 +5,10 @@
 // confronto i numeri inseriti dall'utente con quelli rnd( confronto tra array?)
 
 
-// creo cinque numeri rnd 
-let rndNum = (1, 100);
+// creo numeri rnd 
+let rndNum = getRndNum(1, 100);
 console.log(rndNum);
 
-function getRndInteger(min, max) {
+function getRndNum(min, max) {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
