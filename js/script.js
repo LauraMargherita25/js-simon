@@ -24,7 +24,9 @@ for (let i = 0; i < 5; i++) {
 }
 console.log(arrRndNum);
 
+
 // visualizzo i numeri nella pagina
+
 //let eleContainer = document.getElementById('#container');
 const eleBox = document.createElement("div");
 eleBox.classList.add("box");
@@ -37,3 +39,41 @@ document.body.append(eleBox);
 ele5RndNum.classList.add("main_container");
 ele5RndNum.innerHTML = arrRndNum;
 gridContainer.append(square);*/
+
+
+// faccio sparire i numeri
+
+setTimeout(showOffNum, 1000 * 30);
+
+function showOffNum() {
+    //alert("scompari ora");
+    eleBox.innerHTML = (" Te li ricordi tutti? ");
+
+    for (let i = 0; i < 5; i++) {
+        
+        /*let eleAddNum = prompt("Inserisci i numeri in ordine uno alla volta?");
+        console.log(eleAddNum)
+        arrAddNum.push(eleAddNum);*/
+        arrAddNum.push(prompt('Numero ' + (i+1)));
+    }
+}
+
+// Dopo aver nascosto i numeri chiedete all'utente (con dei prompt) di inserirli in ordine, uno alla volta.
+// chiedo all'utente i cinque numeri
+
+let arrAddNum = [];
+
+// setTimeout(showPrompt, 1000 * 30);
+
+// function showPrompt() {
+    
+//     for (let i = 0; i < 5; i++) {
+        
+//         /*let eleAddNum = prompt("Inserisci i numeri in ordine uno alla volta?");
+//         console.log(eleAddNum)
+//         arrAddNum.push(eleAddNum);*/
+//         arrAddNum.push(prompt('Numero ' + (i+1)));
+//     }
+// }
+console.log(arrAddNum);
+
