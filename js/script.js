@@ -41,39 +41,41 @@ ele5RndNum.innerHTML = arrRndNum;
 gridContainer.append(square);*/
 
 
-// faccio sparire i numeri
+/* Dopo aver nascosto i numeri chiedete all'utente (con dei prompt) di inserirli in ordine, uno alla volta.
+chiedo all'utente i cinque numeri */
 
 setTimeout(showOffNum, 1000 * 30);
 
 function showOffNum() {
-    //alert("scompari ora");
+    
+    // faccio sparire i numeri
     eleBox.innerHTML = (" Te li ricordi tutti? ");
 
+    // chiedo all'utente i cinque numeri
     for (let i = 0; i < 5; i++) {
         
         /*let eleAddNum = prompt("Inserisci i numeri in ordine uno alla volta?");
         console.log(eleAddNum)
         arrAddNum.push(eleAddNum);*/
-        arrAddNum.push(prompt('Numero ' + (i+1)));
+        arrAddNum.push(parseInt(prompt('Numero ' + (i+1))));
+
+        // confronto i 5 numeri rnd con i cinque numeri inseriti dall'utente
+        if (arrRndNum[i] == arrAddNum[i]){
+            console.log("hai vinto");
+        }else{
+            console.log("hai perso");
+        }
     }
+
 }
 
-// Dopo aver nascosto i numeri chiedete all'utente (con dei prompt) di inserirli in ordine, uno alla volta.
-// chiedo all'utente i cinque numeri
 
 let arrAddNum = [];
 
-// setTimeout(showPrompt, 1000 * 30);
-
-// function showPrompt() {
-    
-//     for (let i = 0; i < 5; i++) {
-        
-//         /*let eleAddNum = prompt("Inserisci i numeri in ordine uno alla volta?");
-//         console.log(eleAddNum)
-//         arrAddNum.push(eleAddNum);*/
-//         arrAddNum.push(prompt('Numero ' + (i+1)));
-//     }
-// }
 console.log(arrAddNum);
+
+
+//console.log(arrRndNum.diff(arrAddNum));
+
+//const intersection = arrRndNum.filter(element => arrAddNum.includes(element));
 
