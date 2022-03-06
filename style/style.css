@@ -11,6 +11,7 @@ body{
     font-size: 50px;
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -25,4 +26,12 @@ body{
 .box{
     display: inline-block;
     background-color: blueviolet;
+}
+
+.score{
+
+}
+
+.right_answer{
+    
 }

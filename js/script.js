@@ -19,7 +19,7 @@ for (let i = 0; i < 5; i++) {
     console.log("siamo 5 rndNum" + " " + rndNum);
     
     arrRndNum.push(rndNum);
-
+    
     // inserisci evita doppioni
 }
 console.log(arrRndNum);
@@ -43,6 +43,8 @@ gridContainer.append(square);*/
 
 /* Dopo aver nascosto i numeri chiedete all'utente (con dei prompt) di inserirli in ordine, uno alla volta.
 chiedo all'utente i cinque numeri */
+let arrAddNum = [];
+let score = 0;
 
 setTimeout(showOffNum, 1000 * 30);
 
@@ -61,16 +63,29 @@ function showOffNum() {
 
         // confronto i 5 numeri rnd con i cinque numeri inseriti dall'utente
         if (arrRndNum[i] == arrAddNum[i]){
-            console.log("hai vinto");
+            score = score + 1;
+            console.log(arrAddNum[i]);
+            eleRightAnswer.innerHTML = ("right answers: " + arrAddNum[i]);
         }else{
-            console.log("hai perso");
+            console.log("hai sbagliato");
         }
     }
-
+    console.log("score:" + score);
+    eleScore.innerHTML = ("score: " + score);
+    
 }
 
+const eleScore = document.createElement("div");
+eleScore.classList.add("score");
+eleScore.innerHTML = ("score: ");
+document.body.append(eleScore);
 
-let arrAddNum = [];
+const eleRightAnswer = document.createElement("div");
+eleRightAnswer.classList.add("right_answer");
+// eleRightAnswer.innerHTML = ("right answers: " + arrAddNum[i]);
+document.body.append(eleRightAnswer);
+
+
 
 console.log(arrAddNum);
 
