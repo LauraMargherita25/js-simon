@@ -45,6 +45,7 @@ gridContainer.append(square);*/
 chiedo all'utente i cinque numeri */
 let arrAddNum = [];
 let score = 0;
+let arrRightAnswer = [];
 
 setTimeout(showOffNum, 1000 * 30);
 
@@ -65,7 +66,7 @@ function showOffNum() {
         if (arrRndNum[i] == arrAddNum[i]){
             score = score + 1;
             console.log(arrAddNum[i]);
-            eleRightAnswer.innerHTML = ("right answers: " + arrAddNum[i]);
+            arrRightAnswer.push(arrAddNum[i])
         }else{
             console.log("hai sbagliato");
         }
@@ -82,12 +83,13 @@ document.body.append(eleScore);
 
 const eleRightAnswer = document.createElement("div");
 eleRightAnswer.classList.add("right_answer");
-// eleRightAnswer.innerHTML = ("right answers: " + arrAddNum[i]);
+eleRightAnswer.innerHTML = (arrRightAnswer);
 document.body.append(eleRightAnswer);
 
 
 
 console.log(arrAddNum);
+console.log(arrRightAnswer);
 
 
 //console.log(arrRndNum.diff(arrAddNum));
