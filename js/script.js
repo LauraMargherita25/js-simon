@@ -73,6 +73,7 @@ function showOffNum() {
     }
     console.log("score:" + score);
     eleScore.innerHTML = ("score: " + score);
+    eleRightAnswer.innerHTML = ("right answers: " + arrRightAnswer);
     
 }
 
@@ -83,7 +84,7 @@ document.body.append(eleScore);
 
 const eleRightAnswer = document.createElement("div");
 eleRightAnswer.classList.add("right_answer");
-eleRightAnswer.innerHTML = (arrRightAnswer);
+eleRightAnswer.innerHTML = ("right answers: ");
 document.body.append(eleRightAnswer);
 
 
